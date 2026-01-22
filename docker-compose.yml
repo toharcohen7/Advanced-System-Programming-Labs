@@ -1,0 +1,10 @@
+services:
+  gtest:
+    build:
+      context: ./GTF
+      dockerfile: Dockerfile
+
+  python:
+    build:
+      context: ./python
+      dockerfile: Dockerfile
