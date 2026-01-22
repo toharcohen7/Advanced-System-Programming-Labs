@@ -1,0 +1,7 @@
+<resources>
+<string name="app_name">My Application</string>
+    <string name="foo">Encantado de conocerte</string>
+    <string name="bar">Cómo</string>
+    <string name="foobar">estás</string>
+    <string name="new_button">Nuevo Botón</string>
+</resources>
