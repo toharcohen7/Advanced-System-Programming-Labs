@@ -1,0 +1,8 @@
+<resources>
+    <style name="myBtn">
+        <item name="android:textColor">#8BC34A</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+</resources>
