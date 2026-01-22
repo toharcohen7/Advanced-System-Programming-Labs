@@ -1,0 +1,5 @@
+node_modules
+.DS_Store
+/calc
+/Basic_NodeJS_Project
+/getVsPost
