@@ -1,20 +1,19 @@
 #!/bin/bash
 
 # Configuration: Define the repositories to merge
-# Format: "Desired_Folder_Name|Repository_URL"
-# Ensure you use the correct branch name (usually 'main' or 'master')
+# Note: Ensure URL casing matches exactly (Mini-Exercise vs mini-exercise)
 TARGET_BRANCH="main"
 
 declare -a REPOS=(
     "Week_01|https://github.com/toharcohen7/Week-1-mini-exercise.git"
-    "Week_02|https://github.com/toharcohen7/Week-2-mini-exercise.git"
-    "Week_03|https://github.com/toharcohen7/Week-3-mini-exercise.git"
-    "Week_04|https://github.com/toharcohen7/Week-4-mini-exercise.git"
-    "Week_05|https://github.com/toharcohen7/Week-5-mini-exercise.git"
-    "Week_06|https://github.com/toharcohen7/Week-6-mini-exercise.git"
+    "Week_02|https://github.com/toharcohen7/Week-2-Mini-Exercise.git"
+    "Week_03|https://github.com/toharcohen7/Week-3-Mini-Exercise.git"
+    "Week_04|https://github.com/toharcohen7/Week-4-Mini-Exercise.git"
+    "Week_05|https://github.com/toharcohen7/Week-5-Mini-Exercise.git"
+    "Week_06|https://github.com/toharcohen7/Week-6-Mini-Exercise.git"
     "Week_07|https://github.com/toharcohen7/Week-7-mini-exercise.git"
     "Week_08|https://github.com/toharcohen7/Week-8-mini-exercise.git"
-    "Week_09|https://github.com/toharcohen7/Week-9-mini-exercise.git"
+    "Week_09|https://github.com/toharcohen7/Week-9-Mini-Exercise.git"
     "Week_10|https://github.com/toharcohen7/Week-10-mini-exercise.git"
     "Week_11|https://github.com/toharcohen7/Week-11-mini-exercise.git"
     "Week_12|https://github.com/toharcohen7/Week-12-mini-exercise.git"
@@ -39,7 +38,7 @@ for entry in "${REPOS[@]}"; do
     fi
 
     # Execute git subtree add
-    # This command fetches the remote repo and merges it into the specified prefix folder
+    # Using --squash to consolidate history (optional)
     git subtree add --prefix="$FOLDER_NAME" "$REPO_URL" "$TARGET_BRANCH" --squash
 
     if [ $? -eq 0 ]; then
